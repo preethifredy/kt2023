@@ -1,0 +1,95 @@
+@mixin navLinkAfter {
+  content: "";
+  height: 4px;
+  width: 100%;
+  position: $absolute;
+  left: $zero;
+  bottom: $zero;
+}
+
+@mixin navActiveShow {
+  background: none;
+  position: $relative;
+  color: $colorBlack;
+}
+
+.essentials {
+  .nav-pills {
+    .nav-link {
+      border-radius: $zero;
+      margin: $zero auto;
+      padding: $zero $zero 18px;
+      color: #a4a4a4;
+
+      &.active {
+        @include navActiveShow;
+
+        &:after {
+          @include navLinkAfter;
+          background: $colorPrimary;
+        }
+      }
+
+      &.show {
+        @include navActiveShow;
+
+        &:after {
+          @include navLinkAfter;
+        }
+      }
+    }
+
+    .show {
+      &:after {
+        background: $colorPrimary;
+      }
+    }
+
+    .nav-item {
+      float: left;
+      margin: $zero auto;
+      width: 33.333%;
+      text-align: $elemCenter;
+    }
+  }
+
+  .tab-content {
+    .form-sec {
+      position: $absolute;
+      left: 50%;
+      top: 50%;
+      width: 100%;
+      padding: 30px;
+      transform: translate(-50%, -50%);
+    }
+
+    .img-block {
+      &:hover {
+        &:before {
+          content: "";
+          position: $absolute;
+          left: $zero;
+          top: $zero;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.411);
+        }
+      }
+
+      .desc {
+        position: $absolute;
+        bottom: $zero;
+        left: $zero;
+        padding: 30px;
+      }
+    }
+  }
+
+  .weather-fixed {
+    .desc-top {
+      padding-top: 80px;
+      padding-bottom: 40px;
+      margin-bottom: 40px;
+    }
+  }
+}

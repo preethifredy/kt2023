@@ -1,0 +1,39 @@
+@import "@app/styles/scss/_variable.scss";
+
+@mixin owlnavs {
+  position: $absolute;
+  bottom: $zero;
+  width: 80px;
+  height: 80px;
+  opacity: 0.9;
+  margin: $zero;
+  padding: $zero;
+  border-radius: $zero;
+}
+
+.what-new {
+  padding-bottom: 45px;
+  .desc-esntl {
+    position: $absolute;
+    padding: 60px;
+    bottom: $zero;
+  }
+  .col-overlay {
+    &:hover {
+      background: rgba(0, 0, 0, 0.253);
+    }
+  }
+  .owl-carousel.owl-theme {
+    .owl-nav {
+      margin-top: 0;
+      button.owl-prev {
+        right: 80px;
+        @include owlnavs;
+      }
+      button.owl-next {
+        right: $zero;
+        @include owlnavs;
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+// footer style
+footer {
+  background: #050608;
+  padding: 80px 0;
+
+  .footer-menu {
+    max-width: 567px;
+    li {
+      display: $elemInlineBlock;
+      margin-bottom: 5px;
+      &:last-child a {
+        &:after {
+          background: $elemNone;
+        }
+      }
+      a {
+        position: $relative;
+        padding-right: 10px;
+        color: $colorWhite;
+        margin-right: 5px;
+
+        &:after {
+          content: "";
+          background: #ccc;
+          height: 15px;
+          width: 1px;
+          right: $zero;
+          top: 4px;
+          position: $absolute;
+        }
+        &:hover {
+          color: $colorPrimary;
+        }
+      }
+    }
+  }
+}

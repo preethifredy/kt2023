@@ -1,0 +1,54 @@
+@import "./_variable.scss";
+
+.ibm-font-16 {
+  font-size: $font16;
+}
+
+.font-flair-18,
+.ibm-font-18,
+.font-18 {
+  font-size: $font18;
+}
+
+.font-flair-22,
+.font-22,
+.ibm-font-22 {
+  font-size: $font22;
+}
+
+.ibm-font-26 {
+  font-size: $font26;
+}
+
+.ibm-font-38 {
+  font-size: 38px;
+}
+
+.ibm-font-40 {
+  font-size: 40px;
+}
+
+.ibm-font-light {
+  font-weight: 400;
+}
+
+.ibm-font-medium,
+.ibm-regular {
+  font-weight: 500;
+}
+
+.ibm-semi-bold {
+  font-weight: $fontSemiBold;
+}
+
+.head-sub {
+  font-size: 40px;
+}
+
+.head-title-sub {
+  font-size: 36px;
+}
+
+.text-bold {
+  font-weight: bold;
+}

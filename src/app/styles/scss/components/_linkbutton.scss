@@ -1,0 +1,49 @@
+@mixin readMoreHover {
+  color: $colorBlack !important;
+  background: #ffc900;
+  border: 1px solid #ffc900;
+}
+
+.read-more {
+  position: $relative;
+  display: $elemInlineBlock;
+  padding-right: 28px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 11px;
+  border-radius: 30px;
+  border: 1px solid #a7a7a7;
+  font-size: $font16;
+  @include transition;
+
+  i {
+    top: 8px;
+    right: 8px;
+    position: $absolute;
+    @include transition;
+  }
+
+  &:hover i {
+    right: 6px;
+    @include transition;
+  }
+}
+
+.btn-block {
+  position: absolute;
+  bottom: 26px;
+  right: 15px;
+}
+
+.custom-btn-block.btn-block {
+  bottom: -58px;
+  right: 15px;
+}
+
+.text-light.read-more:hover,
+.text-black.read-more:hover,
+.text-dark.read-more:hover,
+.text-white.read-more:hover,
+.text-yellow.read-more:hover {
+  @include readMoreHover;
+}

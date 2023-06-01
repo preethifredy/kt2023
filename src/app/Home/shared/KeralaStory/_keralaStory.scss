@@ -1,0 +1,38 @@
+@import "@app/styles/scss/_variable.scss";
+
+.kerala-story {
+  .profile-page {
+    position: $absolute;
+    bottom: $zero;
+    .profile-header {
+      position: $relative;
+      .profile-image img {
+        border-radius: 50%;
+        width: 100%;
+      }
+      .social-icon a {
+        margin: $zero 5px;
+      }
+      .blogger-text {
+        padding-top: 20px;
+      }
+    }
+  }
+  .bg-grey-light {
+    background: #f3f3f3;
+  }
+  .k-stories {
+    .desc {
+      padding-top: 100px;
+      padding-left: 100px;
+      padding-right: 100px;
+      padding-bottom: 50px;
+    }
+    .card-body {
+      padding: 30px 80px;
+    }
+    .read-more.play-btn i {
+      top: 5px;
+    }
+  }
+}

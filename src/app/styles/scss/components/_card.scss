@@ -1,0 +1,115 @@
+@mixin contentHidden {
+  position: $absolute;
+  opacity: $zero;
+  z-index: 9;
+  visibility: $elemHidden;
+}
+
+@mixin contentShown {
+  visibility: visible;
+  opacity: 1;
+}
+
+.grid {
+  position: $relative;
+}
+
+figure {
+  @include transition;
+  margin-bottom: 28px;
+  &.fig-overlay {
+    overflow: hidden;
+    .fig-caption {
+      position: $absolute;
+      bottom: 62px;
+      z-index: 99;
+      width: 100%;
+      padding: 30px 50px;
+    }
+    .btm-txt {
+      bottom: $zero;
+      padding: 25px 50px;
+      @include contentHidden;
+      .link-btn {
+        padding: 15px $zero $zero;
+        border-top: 1px solid #7f7f7f;
+      }
+    }
+    .icon-map {
+      right: $zero;
+      left: $zero;
+      top: 60px;
+      z-index: 1;
+      margin: $zero auto;
+      text-align: center;
+      max-width: 160px;
+      @include contentHidden;
+      img {
+        width: 160px;
+      }
+    }
+    .icon-fav {
+      top: 30px;
+      right: 30px;
+      @include contentHidden;
+      img {
+        width: 36px;
+      }
+    }
+    .top-txt {
+      top: 30px;
+      z-index: 2;
+      position: $absolute;
+      padding: 25px 50px;
+      .card-horizontal {
+        display: flex;
+        flex: 1 1 auto;
+        .digit-wrapper {
+          padding-right: 22px;
+          &:after {
+            content: "";
+            position: $absolute;
+            right: $zero;
+            top: 16px;
+            height: 60px;
+            width: 1px;
+            background: $colorWhite;
+          }
+        }
+      }
+    }
+    &:hover {
+      .img-zoom {
+        transform: scale(1.1);
+      }
+      .fig-caption {
+        bottom: 80px;
+      }
+      &:before {
+        content: "";
+        position: $absolute;
+        left: $zero;
+        top: $zero;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.637);
+      }
+      .top-txt {
+        top: 40px;
+      }
+      .btm-txt {
+        @include contentShown;
+      }
+      .icon-map {
+        @include contentShown;
+      }
+      .icon-fav {
+        @include contentShown;
+      }
+    }
+  }
+  &:hover {
+    @include transition;
+  }
+}

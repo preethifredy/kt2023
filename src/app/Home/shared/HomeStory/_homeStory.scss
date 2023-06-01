@@ -1,0 +1,87 @@
+@import "@app/styles/scss/_variable.scss";
+
+.video-block {
+  .slider-item {
+    height: 100vh;
+  }
+  .banner-slider-wrap {
+    .video-item {
+      height: 100vh;
+      width: 100%;
+      video {
+        height: 100%;
+        width: 100%;
+        object-fit: cover
+      }
+    }
+    .video-controls {
+      right: 80px;
+      bottom: 30px;
+      .btn-cntrl {
+        line-height: 1;
+        color: $colorWhite;
+        outline: $zero;
+        cursor: pointer;
+        -ms-flex-pack: $elemCenter;
+        justify-content: $elemCenter;
+        display: $elemBlock;
+        width: 42px;
+        height: 42px;
+        font-size: 22px;
+        line-height: 40px;
+        border-radius: 50%;
+        border: 1px solid $colorWhite;
+      }
+    }
+  }
+  .slide-nav-wrap {
+    ul {
+      justify-content: space-between;
+      li.lineList {
+        cursor: pointer;
+        i {
+          position: $absolute;
+          height: 1px;
+          top: $zero;
+          left: $zero;
+          width: 100%;
+          background-color: #e7e7e7e7;
+        }
+        .line-progress {
+          top: $zero;
+          left: $zero;
+          z-index: 9;
+          height: 1px;
+          cursor: pointer;
+          position: $relative;
+        }
+      }
+    }
+  }
+  .desc {
+    position: $absolute;
+    right: 120px;
+    bottom: 100px;
+    z-index: 9;
+    max-width: 415px;
+    p {
+      font-size: $font20;
+      font-weight: 500;
+    }
+    h3 {
+      font-size: $font26;
+    }
+    .descwrap {
+      padding-left: 15px;
+      &:before {
+        content: "";
+        left: $zero;
+        top: 7px;
+        width: 1px;
+        position: $absolute;
+        height: 144px;
+        background: #a8b6a5;
+      }
+    }
+  }
+}

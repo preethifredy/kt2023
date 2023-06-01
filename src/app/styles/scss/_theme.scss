@@ -1,0 +1,25 @@
+@import "./_variable.scss";
+
+.bg-yellow {
+  background: $colorPrimary;
+}
+
+.text-yellow {
+  color: $colorPrimary;
+}
+
+.hover-theme {
+  &:hover {
+    color: $colorPrimary;
+  }
+}
+
+.custom-head {
+  border-top: 5px $solid $colorPrimary;
+}
+
+.innerPage {
+  header {
+    border-top: 4px $solid $colorPrimary;
+  }
+}

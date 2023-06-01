@@ -1,0 +1,91 @@
+@mixin placeCarousalNav {
+  position: $absolute;
+  bottom: $zero;
+  width: 80px;
+  height: 80px;
+  opacity: 0.9;
+  margin: $zero;
+  padding: $zero;
+  border-radius: $zero;
+}
+
+.owl-theme.owl-carousel .owl-dots .owl-dot,
+.owl-theme.owl-carousel .owl-dots .owl-dot span {
+  @include transition;
+}
+
+// Common Carousel
+.section-block {
+  .owl-theme.owl-carousel.carousel-mirror {
+    .owl-nav {
+      padding-top: $zero;
+      max-width: 120px;
+      margin: $zero auto;
+      position: $absolute;
+      bottom: -68px;
+      right: $zero;
+      left: $zero;
+
+      button.owl-prev,
+      button.owl-next {
+        margin: $zero 6px;
+        width: 40px;
+        height: 40px;
+        &:hover {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+
+  .owl-dots {
+    position: $absolute;
+    top: -60px;
+    left: $zero;
+    right: $zero;
+
+    .owl-dot.active {
+      span {
+        background: #ffcb0d;
+        width: 22px;
+        height: 6px;
+        border-radius: 30px;
+      }
+    }
+
+    .owl-dot {
+      span {
+        background: #7f7f7f;
+        width: 6px;
+        height: 6px;
+        border-radius: 6px;
+      }
+    }
+  }
+}
+
+// Places Carousel
+.reg-slide-block {
+  .desc-default {
+    position: $absolute;
+    bottom: $zero;
+    left: $zero;
+    max-width: 567px;
+    padding: 50px 80px;
+    background: $colorWhite;
+  }
+  .owl-carousel.owl-theme {
+    .owl-nav {
+      button.owl-prev {
+        left: 487px;
+        z-index: 9;
+        @include placeCarousalNav;
+      }
+      button.owl-next {
+        @include placeCarousalNav;
+        left: 567px;
+        z-index: 9;
+      }
+    }
+  }
+}

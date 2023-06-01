@@ -1,0 +1,13 @@
+@import "@app/styles/scss/_variable.scss";
+
+.post-slide {
+  .desc {
+    position: $relative;
+    margin: $zero auto;
+  }
+
+  .custom-wrap {
+    max-width: 767px;
+    margin: $zero auto;
+  }
+}

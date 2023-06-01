@@ -1,0 +1,59 @@
+@keyframes nudge {
+  0% {
+    transform: translateX(0);
+  }
+  30% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  70% {
+    transform: translateX(-2px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.play-btn.posCenter {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.btn-stroke {
+  display: inline-block;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  .strokecircle {
+    stroke: #fff;
+    stroke-dasharray: 650;
+    stroke-dashoffset: 650;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    opacity: 0.3;
+  }
+  .triangle {
+    transition: all 0.7s ease-in-out;
+    -webkit-transition: all 0.7s ease-in-out;
+    stroke-dasharray: 240;
+    stroke-dashoffset: 480;
+    stroke: #fff;
+    transform: translateY(0);
+  }
+  &:hover {
+    .triangle {
+      stroke-dashoffset: 0;
+      opacity: 1;
+      stroke: #fff;
+      animation: nudge 0.7s ease-in-out;
+    }
+    .strokecircle {
+      stroke-dashoffset: 0;
+      opacity: 1;
+    }
+  }
+}

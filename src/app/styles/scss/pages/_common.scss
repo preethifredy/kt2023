@@ -1,0 +1,59 @@
+html {
+  overflow-x: $elemHidden;
+}
+
+body {
+  margin: $zero;
+  padding: $zero;
+  font-size: $font16;
+  position: $relative;
+  overflow-x: $elemHidden;
+  -webkit-text-size-adjust: $elemNone;
+  font-family: $fontSecondary;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  a {
+    &:hover {
+      outline: $elemNone;
+      text-decoration: $elemNone;
+    }
+  }
+
+  &:focus-visible {
+    outline: $elemNone;
+    text-decoration: $elemNone;
+  }
+}
+
+body.dt-disable-scroll {
+  height: 100vh;
+  overflow: $elemHidden;
+  position: $relative;
+
+  &:before {
+    content: "";
+    position: $absolute;
+    left: $zero;
+    top: $zero;
+    background: rgba(0, 0, 0, 0.51);
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+  }
+}
+
+input {
+  &:hover,
+  &:focus {
+    outline: $elemNone;
+  }
+}
+
+:focus {
+  box-shadow: $elemNone;
+}
+
+.-trans {
+  @include transition;
+}
